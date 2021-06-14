@@ -8,17 +8,17 @@ services:
       - 25565:25565
     environment:
       EULA: "TRUE"
-      MEMORY: "700M"
+      MEMORY: "500M"
       TZ: "Europe/Paris"
       VIEW_DISTANCE: 10
       ENABLE_AUTOPAUSE: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
-      MAX_TICK_TIME: "-1"
+      MAX_TICK_TIME: "1000"
       MAX_PLAYERS: 10
       TYPE: "BUKKIT"
       PLUGINS_SYNC_UPDATE: "FALSE"
       #WHITELIST: "user1,user2"
     volumes:
-      - ./data:/data
+      - /data/minecraft-server:/data
       - ./plugins:/plugins
 
